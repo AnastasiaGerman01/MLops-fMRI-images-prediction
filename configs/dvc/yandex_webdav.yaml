@@ -1,0 +1,3 @@
+remote: data
+timeout: 600
+jobs: 1

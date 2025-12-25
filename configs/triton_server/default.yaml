@@ -1,0 +1,6 @@
+url: "127.0.0.1:8001"
+triton_repo_dir: triton_models
+model_name: "fmri_mlp"
+model_version: "1"
+input_name: "input"
+output_name: "output"

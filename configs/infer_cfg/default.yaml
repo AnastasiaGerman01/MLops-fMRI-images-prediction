@@ -1,0 +1,16 @@
+artifacts_dir: artifacts
+checkpoint_path: artifacts/best.ckpt
+
+batch_size: 64
+num_workers: 0
+pin_memory: true
+
+accelerator: auto
+devices: 1
+
+output_dir: outputs
+
+make_plots: true
+viz_scan: 37
+viz_dim: 0
+viz_slice: 22

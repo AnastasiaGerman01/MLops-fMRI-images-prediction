@@ -1,0 +1,9 @@
+triton:
+  model_name: "audio_fmri_onnx"
+  model_repo_dir: "triton/model_repository"
+  onnx_path: "artifacts/onnx/model.onnx"
+  ports:
+    http: 8000
+    grpc: 8001
+    metrics: 8002
+  docker_image: "nvcr.io/nvidia/tritonserver:25.08-py3"

@@ -1,0 +1,14 @@
+defaults:
+  - mlflow: default
+  - dvc: yandex_webdav
+  - data: default
+  - preprocess/audio: default
+  - preprocess/fmri: default
+  - preprocess/pairs: dt_search_4_8
+  - target: delta
+  - plots: default
+  - split: default
+  - model: mlp
+  - optim: adamw
+  - train_cfg: default
+  - checkpoint: default

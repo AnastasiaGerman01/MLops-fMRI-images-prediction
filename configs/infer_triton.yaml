@@ -1,0 +1,10 @@
+defaults:
+  - data: default
+  - dvc: yandex_webdav
+  - preprocess/audio: default
+  - preprocess/pairs: infer
+  - preprocess/fmri: default
+  - target: delta
+  - split: default
+  - infer_triton_cfg: default
+  - triton_server: default

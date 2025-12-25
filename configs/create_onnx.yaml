@@ -1,0 +1,9 @@
+onnx:
+  ckpt_path: artifacts/best.ckpt
+  triton_repo_dir: triton_models
+  model_name: fmri_mlp
+  model_version: 1
+  opset: 18
+  dummy_batch_size: 2
+  max_batch_size: 64
+  best_dt_path: artifacts/best_dt.txt

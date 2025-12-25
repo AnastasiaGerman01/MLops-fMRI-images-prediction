@@ -1,0 +1,6 @@
+[core]
+    remote = data
+['remote "data"']
+    url = webdavs://webdav.yandex.ru/dvcstore
+    user = a.german@centraluniversity.ru
+    timeout = 600

@@ -1,0 +1,3 @@
+reconstruct_from_delta: true
+clip_min: 0.0
+clip_max: 1.0

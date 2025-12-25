@@ -1,0 +1,10 @@
+defaults:
+  - dvc: yandex_webdav
+  - data: default
+  - preprocess/audio: default
+  - preprocess/pairs: infer
+  - preprocess/fmri: default
+  - target: delta
+  - split: default
+  - model: mlp
+  - infer_cfg: default

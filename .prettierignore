@@ -1,0 +1,6 @@
+outputs/
+artifacts/
+plots/
+data/
+mlruns/
+.dvc/
