@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
@@ -32,6 +33,9 @@ class MetricsPlotCallback(Callback):
 
     def on_fit_end(self, trainer, pl_module) -> None:
         self.out_dir.mkdir(parents=True, exist_ok=True)
+
+        json_path = self.out_dir / f"{self.prefix}_metrics_history.json"
+        json_path.write_text(json.dumps(self.history, indent=2))
 
         plots = [
             ("val_MSE.png", "val_MSE"),
