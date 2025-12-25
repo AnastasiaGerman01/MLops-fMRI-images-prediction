@@ -172,8 +172,13 @@ uv run python -m scripts.create_onnx onnx.model_version=1
 Если же вы не хотите делать инференс через Trion Inference Server, то ничего делать не надо
 
 ## Infer
+-   Добавляем ключ для скачивания данных
+  ```
+  export YANDEX_WEBDAV_TOKEN=<токен>
+  ```
 
 - Через  Trion Inference Server
+   
    - запускаем сервер с сохранёнными моделями
      ```
      docker run --rm \
@@ -197,4 +202,5 @@ uv run python -m scripts.create_onnx onnx.model_version=1
 
 
 **Формат инференса**. Будут высвечиваться 3 картинки в следующем порядке: исходная, предсказанная, разница между исходной и предсказанной.
+
 
