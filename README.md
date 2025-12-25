@@ -165,7 +165,7 @@ uv run python -m scripts.train data.subject_id=09
 ## Production preparation
 В данном проекте есть опция делать инференс c помощью Trion Inference Server и без него, если вы хотите использовать Trion Inference Server, то необходимо сначала перевести модель в формат Onnx и сохранить в нужной директории:
 ```
-uv run python -m create_onnx onnx.model_version=1
+uv run python -m scripts.create_onnx onnx.model_version=1
 ```
 в качестве  `onnx.model_version` можно использовать любой номер
 
@@ -177,8 +177,8 @@ uv run python -m create_onnx onnx.model_version=1
    - запускаем сервер с сохранёнными моделями
      ```
      docker run --rm \
-     -p 18001:8001 -p 18002:8002 -p 18000:8000 \
-     -v "$(pwd)/triton_models:/models" \
+     -p8000:8000 -p8001:8001 -p8002:8002 \
+     -v $(pwd)/triton_models:/models \
      nvcr.io/nvidia/tritonserver:24.10-py3 \
      tritonserver --model-repository=/models
      ```
@@ -197,3 +197,4 @@ uv run python -m create_onnx onnx.model_version=1
 
 
 **Формат инференса**. Будут высвечиваться 3 картинки в следующем порядке: исходная, предсказанная, разница между исходной и предсказанной.
+
