@@ -28,7 +28,7 @@ class MetricsPlotCallback(Callback):
         metrics = trainer.callback_metrics
         self._append("train_MSE", metrics.get("train_MSE"))
         self._append("val_MSE", metrics.get("val_MSE"))
-        self._append("val_Pearson",metrics.get("val_Pearson"))
+        self._append("val_Pearson", metrics.get("val_Pearson"))
 
     def on_fit_end(self, trainer, pl_module) -> None:
         self.out_dir.mkdir(parents=True, exist_ok=True)
@@ -36,7 +36,7 @@ class MetricsPlotCallback(Callback):
         plots = [
             ("val_MSE.png", "val_MSE"),
             ("train_MSE.png", "train_MSE"),
-            ("val_Pearson.png", "val_Pearson")
+            ("val_Pearson.png", "val_Pearson"),
         ]
 
         for filename, key in plots:
