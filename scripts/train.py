@@ -110,6 +110,8 @@ def _train_for_dt(
 
 
 def train(cfg: DictConfig) -> None:
+    L.seed_everything(42, workers=True)
+    
     ensure_dvc_data(
         data_path=cfg.data.path,
         remote_name=cfg.dvc.remote,
