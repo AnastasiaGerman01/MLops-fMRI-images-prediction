@@ -6,7 +6,6 @@ wheels/
 *.egg-info
 plots/
 lightining_logs/
-artifacts/
 data/raw
 outputs/
 data/raw/
